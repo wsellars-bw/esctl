@@ -44,7 +44,24 @@ changelog:
     exclude:
       - '^docs:'
       - '^test:'
-
+brews:
+  - repository:
+      owner: bandwidth
+      name: homebrew-internal-tools
+    directory: Formula
+    homepage: https://www.github.com/wsellars-bw/esctl
+    description: "CLI tool written in Go to for interacting with elasticsearch API."
+    license: "MIT"
+    commit_author:
+      name: goreleaserbot
+      email: goreleaser@lamolabs.org
+    dependencies:
+      - name: go
+      - name: coreutils
+    test: |
+      system "#{bin}/esctl"
+    install: |
+      bin.install "esctl"
 # The lines beneath this are called `modelines`. See `:help modeline`
 # Feel free to remove those if you don't want/use them.
 # yaml-language-server: $schema=https://goreleaser.com/static/schema.json
