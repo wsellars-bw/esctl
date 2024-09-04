@@ -45,7 +45,7 @@ changelog:
       - '^test:'
 brews:
   - repository:
-      owner: bandwidth
+      owner: Bandwidth
       name: homebrew-internal-tools
     directory: Formula
     homepage: https://www.github.com/wsellars-bw/esctl
